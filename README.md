@@ -1,4 +1,4 @@
-# My WM
+# my desktop configuration files and scripts
 
 ## dependencies
 
