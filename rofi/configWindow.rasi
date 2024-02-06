@@ -1,0 +1,25 @@
+configuration {
+  modes: [ window ];
+  font: "JetBrainsMono NFM 12";
+  fixed-num-lines: true;
+  show-icons: true;
+  window-thumbnail: true;
+  icon-theme: "Papirus";
+  display-window: "🌈 WINDOW";
+}
+
+@theme "default"
+@import "./theme.rasi"
+element-icon {
+    size:             100px ;
+
+}
+
+listview {
+    // dynamic: true;
+    // fixed-columns: false;
+    // fixed-rows: false;
+    // fixed-height: false;
+    // layout: "grid";
+    // flow: "vertical";
+}

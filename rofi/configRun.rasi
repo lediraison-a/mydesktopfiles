@@ -1,0 +1,19 @@
+configuration {
+  modes: [ combi ];
+  combi-modes: [ drun, run ];
+  font: "JetBrainsMono NFM 12";
+  fixed-num-lines: true;
+  show-icons: true;
+  icon-theme: "Papirus";
+  display-run: "🚀 RUN";
+}
+
+@theme "default"
+@import "./theme.rasi"
+
+listview {
+    layout: vertical;
+    spacing: 0;
+    flow: vertical;
+    columns: 4;
+}
