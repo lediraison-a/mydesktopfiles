@@ -159,16 +159,18 @@ bindsym $mod+j workspace prev_on_output
 bindsym $mod+k workspace next_on_output
 # move focused container to workspace
 
+bindsym $mod+Shift+o move container to display next
+
 bindsym $mod+Shift+1 exec $script/i3WSpaceMoveto.sh 1
-bindsym $mod+Shift+eacute exec $script/i3WSpaceMoveto.sh 2
+bindsym $mod+Shift+2 exec $script/i3WSpaceMoveto.sh 2
 bindsym $mod+Shift+3 exec $script/i3WSpaceMoveto.sh 3
 bindsym $mod+Shift+4 exec $script/i3WSpaceMoveto.sh 4
 bindsym $mod+Shift+5 exec $script/i3WSpaceMoveto.sh 5
 bindsym $mod+Shift+6 exec $script/i3WSpaceMoveto.sh 6
-bindsym $mod+Shift+egrave exec $script/i3WSpaceMoveto.sh 7
+bindsym $mod+Shift+7 exec $script/i3WSpaceMoveto.sh 7
 bindsym $mod+Shift+8 exec $script/i3WSpaceMoveto.sh 8
-bindsym $mod+Shift+ccedilla move container to workspace number $ws9
-bindsym $mod+Shift+agrave move container to workspace number $ws10
+bindsym $mod+Shift+9 exec $script/i3WSpaceMoveto.sh 9
+bindsym $mod+Shift+0 exec $script/i3WSpaceMoveto.sh 0
 
 # move focused container to next workspace
 bindsym $mod+Shift+n move container to workspace next
@@ -179,6 +181,7 @@ bindsym $mod+n workspace next
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
+
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
