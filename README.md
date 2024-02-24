@@ -13,6 +13,13 @@ Based on github theme with a blur and transparency effect.
 - `rofi` as application launcher
 - `alacritty` as terminal emulator
 - `flameshot` as screenshot tool
+- `tmux` as terminal multiplexer
+- `zsh` as shell
+- `exa` as ls replacement
+
+## fonts
+
+- `JetBrainsMono Nerd Font Mono` as monospace font
 
 ## usage
 

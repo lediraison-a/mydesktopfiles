@@ -13,8 +13,10 @@
 
 set $mod Mod4
 
-set $configDir $HOME/.config/i3
-set $scriptDir $HOME/.config/i3/i3/scripts
+set $scriptDir $HOME/mydesktopfiles/scripts
+set $rofiDir $HOME/mydesktopfiles/rofi
+set $polybarDir $HOME/mydesktopfiles/polybar
+set $wallpaper $HOME/mydesktopfiles/wallpaper.jpg
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -40,9 +42,9 @@ exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
 
-exec --no-startup-id feh --bg-fill $configDir/wallpaper.jpg
+exec --no-startup-id feh --bg-fill $HOME/mydesktopfiles/wallpaper.jpg
 
-exec_always --no-startup-id $configDir/polybar/start_polybar.sh
+exec_always --no-startup-id $polybarDir/start_polybar.sh
 
 exec flameshot
 
@@ -74,17 +76,9 @@ bindsym $mod+Return exec i3-sensible-terminal
 bindsym $mod+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+space exec --no-startup-id rofi \
-    -show run \
-    -normal-window \
-    -terminal $TERMINAL \
-    -config '/home/alban/.config/i3/rofi/configRun.rasi'
+bindsym $mod+space exec --no-startup-id $rofiDir/start_rofi.sh run configRun.rasi
 
-bindsym $mod+Tab exec --no-startup-id rofi \
-    -show window \
-    -terminal $TERMINAL \
-    -normal-window \
-    -config '/home/alban/.config/i3/rofi/configWindow.rasi'
+bindsym $mod+Tab exec --no-startup-id $rofiDir/start_rofi.sh window configWindow.rasi
 
 # change focus
 bindsym $mod+h focus prev
@@ -150,16 +144,16 @@ set $ws0 "10"
 
 
 # switch to workspace
-bindsym $mod+ampersand exec i3WSpaceGoto.sh 1 
-bindsym $mod+eacute exec i3WSpaceGoto.sh 2
-bindsym $mod+quotedbl exec i3WSpaceGoto.sh 3
-bindsym $mod+apostrophe exec i3WSpaceGoto.sh 4
-bindsym $mod+parenleft exec i3WSpaceGoto.sh 5
-bindsym $mod+minus exec i3WSpaceGoto.sh 6
-bindsym $mod+egrave exec i3WSpaceGoto.sh 7
-bindsym $mod+underscore exec i3WSpaceGoto.sh 8
-bindsym $mod+ccedilla exec i3WSpaceGoto.sh 9
-bindsym $mod+agrave exec i3WSpaceGoto.sh 0
+bindsym $mod+ampersand exec $scriptDir/i3WSpaceGoto.sh 1 
+bindsym $mod+eacute exec $scriptDir/i3WSpaceGoto.sh 2
+bindsym $mod+quotedbl exec $scriptDir/i3WSpaceGoto.sh 3
+bindsym $mod+apostrophe exec $scriptDir/i3WSpaceGoto.sh 4
+bindsym $mod+parenleft exec $scriptDir/i3WSpaceGoto.sh 5
+bindsym $mod+minus exec $scriptDir/i3WSpaceGoto.sh 6
+bindsym $mod+egrave exec $scriptDir/i3WSpaceGoto.sh 7
+bindsym $mod+underscore exec $scriptDir/i3WSpaceGoto.sh 8
+bindsym $mod+ccedilla exec $scriptDir/i3WSpaceGoto.sh 9
+bindsym $mod+agrave exec $scriptDir/i3WSpaceGoto.sh 0
 
 bindsym $mod+j workspace prev_on_output
 bindsym $mod+k workspace next_on_output

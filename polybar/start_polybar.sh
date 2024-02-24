@@ -8,13 +8,12 @@ polybar-msg cmd quit
 
 if type "xrandr"; then
     for m in $(xrandr --query | grep " connected" | cut -d" " -f1); do
-        # (MONITOR=$m polybar -q b3 -c $HOME/.config/i3/polybar/polybar.ini)&
-        (MONITOR=$m polybar -q b1 -c $HOME/.config/i3/polybar/polybar.ini)&
-        (MONITOR=$m polybar -q b2 -c $HOME/.config/i3/polybar/polybar.ini)&
-        (MONITOR=$m polybar -q b3 -c $HOME/.config/i3/polybar/polybar.ini)&
+        (MONITOR=$m polybar -q b1 -c $(dirname "$0")/polybar.ini)&
+        (MONITOR=$m polybar -q b2 -c $(dirname "$0")/polybar.ini)&
+        (MONITOR=$m polybar -q b3 -c $(dirname "$0")/polybar.ini)&
     done
 else
-    polybar --reload --config=$HOME/.config/i3/polybar.ini example &
+    polybar --reload --config=$(dirname "$0")/polybar.ini example &
 fi
 
 echo "Bars launched..."
