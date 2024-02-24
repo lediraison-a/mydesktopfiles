@@ -1,6 +1,6 @@
 configuration {
   modes: [ window ];
-  font: "JetBrainsMono NFM 12";
+  font: "myfont 12";
   fixed-num-lines: true;
   show-icons: true;
   window-thumbnail: true;

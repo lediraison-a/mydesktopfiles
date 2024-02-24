@@ -1,7 +1,7 @@
 configuration {
   modes: [ combi ];
   combi-modes: [ drun, run ];
-  font: "JetBrainsMono NFM 12";
+  font: "myfont 12";
   fixed-num-lines: true;
   show-icons: true;
   icon-theme: "Papirus";
