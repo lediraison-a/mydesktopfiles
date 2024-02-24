@@ -24,6 +24,6 @@ startx /path/to/this/repo/xinitrc
 
 ## screenshots
 
-![screenshot](./screenshot/1.png)
+![screenshot](./screenshots/1.png)
 
 
