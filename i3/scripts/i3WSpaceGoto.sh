@@ -1,3 +1,3 @@
 #!/bin/sh
 
-exec i3WSpaceMonitorRelative.sh 'workspace' $1
+exec $(dirname "$0")/i3WSpaceMonitorRelative.sh 'workspace' $1

@@ -13,7 +13,7 @@
 
 set $mod Mod4
 
-set $scriptDir $HOME/mydesktopfiles/scripts
+set $scriptDir $HOME/mydesktopfiles/i3/scripts
 set $rofiDir $HOME/mydesktopfiles/rofi
 set $polybarDir $HOME/mydesktopfiles/polybar
 set $wallpaper $HOME/mydesktopfiles/wallpaper.jpg
